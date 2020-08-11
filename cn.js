@@ -1,6 +1,14 @@
 module.exports = {
   student: {
     group: {
+      cancelEnd: '已取消结束培训',
+      cancelSuccess: '取消申请成功',
+      confirmCancel: '确认取消申请团队吗',
+      converter: '文件正在转换中，请稍后再试',
+      joinTime: '加入时间',
+      warn6: '请选择考勤时间',
+      warn5: '请选择考勤阶段',
+      warn4: '活动已开始，无法进入课程详情',
       tip1: '审核通过后才能进入详情噢',
       myTeam: '我的团队',
       moreTeam: '更多团队',
@@ -74,7 +82,7 @@ module.exports = {
       activityPlease: '请选择活动类型',
       timePlease: '请选择活动时间',
       fileUpload: '上传文件',
-      Documents: '文档：doc、docx、ppt、pptx、pdf、txt、xlxs、xls',
+      Documents: '文档：doc、docx、ppt、pptx、pdf、txt、xlsx、xls',
       Up20m: '最大不超过20M',
       questionnaireUpload: '上传评估问卷',
       exerciseUpload: '上传测评练习',
@@ -120,7 +128,19 @@ module.exports = {
       deleteTeam: '确认删除该团队?',
       deleteFile: '确认删除该文件?',
       successfulDownload: '下载成功',
-      failedDownload: '下载失败'
+      failedDownload: '下载失败',
+      addAdvanceSuccess: '新增考勤成功',
+      addAdvanceFailed: '新增考勤失败',
+      timeActivity: '活动时间不能小于当前时间',
+      startActivity: '活动议程开始时间不能小于活动开始时间',
+      endActivity: '活动议程结束时间不能大于活动结束时间',
+      deleteTopic: '确认删除该话题?',
+      fillTitle: '请填写标题',
+      fillContent: '请填写内容',
+      topicFailed: '创建话题失败',
+      leaderOnly: '只有队长才可以邀请新成员!',
+      closeTeam: '确认关闭团队?',
+      exitTeam: '确认退出团队?'
     },
     map: {
       learn: '人学过',
@@ -137,12 +157,16 @@ module.exports = {
       error5: '报名成功',
       error6: '报名失败',
       error7: '再次报名',
+      error8: '当前状态已改变，请刷新页面',
+      error10: '取消报名成功',
+      error9: '取消报名失败',
       mapScore: '学习地图评分',
       passMap: '恭喜您已经通过学习地图',
       viewCertificate: '查看证书',
       taskList: '任务清单',
       enterCourse: '进入课程',
       enterExam: '进入考试',
+      enterEx: '进入练习',
       enterCustom: '进入自定义',
       courseExpired: '该课程已过期，无法进入',
       trainingStarted: '培训已开始，无法进入该培训',
@@ -217,7 +241,7 @@ module.exports = {
       phone: '联系电话',
       email: '邮箱',
       address: '地址：上海市杨浦区国定路335号2号楼18F',
-      Copyright: 'Copyright © 2018 睿泰集团版权所有 沪ICP备14024585号-4',
+      Copyright: 'Copyright ? 2018 睿泰集团版权所有 沪ICP备14024585号-4',
       weChat: '微信公众号',
       weibo: '官方微博',
       resolved: '已解决',
@@ -278,7 +302,7 @@ module.exports = {
       commentSuccess: '发表评论成功！',
       failedComment: '发表评论失败！',
       validity: '有效期',
-      UndergraduateCredit: '本科学分',
+      UndergraduateCredit: '本课学分',
       collected: '已收藏',
       collection: '收藏',
       hasJoinedCourse: '已加入我的课程',
@@ -315,6 +339,7 @@ module.exports = {
       noaccess: '无权限访问！'
     },
     exam: {
+      questionTime: '单题时长',
       times: '考试次数',
       scores: '得分/及格分数/考试总分',
       enter: '进入考试',
@@ -484,7 +509,7 @@ module.exports = {
       trainCourse: '培训课程',
       trainingDuration: '培训时长（天）',
       material: '材料',
-      commentEmpty: '评论内容不能为空'
+      commentEmpty: '回复内容不能为空'
     },
     qa: {
       from: '来自《',
@@ -537,11 +562,11 @@ module.exports = {
       confirmPassword: '确认新密码',
       inputConfirmPassword: '请确认新密码',
       remind1: '友情提醒：密码是由数字、大小写英文字母、 ',
-      remind2: '中任意两种或两种以上组成，且长度8-20位',
-      remind3: '友情提醒：至少6位，建议数字、字母、下划线、',
-      remind4: '组合',
+      remind2: '中任意两种或两种以上组成，且长度6-110位',
+      remind3: '友情提醒：至少6位，建议数字、字母、',
+      remind4: '组合,不区分大小写',
       minPwd: '密码长度最小6位',
-      maxPwd: '密码长度最大210位',
+      maxPwd: '密码长度最大110位',
       pwdStandard: '密码录入不符合字符规范',
       notSamePwd: '两次新密码输入不一致！',
       pwdSucceeded: '修改密码成功！'
@@ -640,6 +665,7 @@ module.exports = {
       catalog: '目录',
       commentArea: '评论区',
       pleaseComment: '请在这里写下评论',
+      pleaseReply: '请在这里写下回复',
       nextSong: '下一首',
       lastSong: '上一首',
       courseCatalog: '课程目录',
@@ -772,6 +798,7 @@ module.exports = {
   },
   class: {
     class: {
+      detail: '预习详情',
       configuration: '培训配置',
       registrationPreparation: '报名准备',
       openingNotice: '开班通知',
@@ -851,7 +878,7 @@ module.exports = {
       instructorEvaluation: '讲师评价',
       instructorComments: '讲师评语',
       numberPeople: '人数',
-      trainTip10: '正整数，不超过10位数',
+      trainTip10: '正整数，不超过5位数',
       totalAmount: '总金额',
       trainingSummary: '培训总结',
       endTraining: '结束培训',
@@ -920,7 +947,8 @@ module.exports = {
       performanceStudent: '的学员表现',
       logoffAuto: '自动下线时间',
       againPublish: '再次发布',
-      deleteTemplate: '确认删除该帮带模板？'
+      deleteTemplate: '确认删除该帮带模板？',
+      trainAmount: '培训金额'
     },
     feedback: {
       bug: 'bug反馈',
@@ -977,7 +1005,8 @@ module.exports = {
       fileName: '文件名称',
       ext: '课件格式',
       duration: '时长',
-      size: '大小'
+      size: '大小',
+      chooseType: '请选择听课分类'
     },
     email: {
       emailTitle: '邮件标题',
@@ -1143,6 +1172,7 @@ module.exports = {
       choose8: '请输入练习通过百分比',
       choose9: '通过百分比只能在1-100之间',
       choose10: '该资源已添加，不可重复添加',
+      error1: '内容不能超过2000字',
       mapType2: '地图分类',
       nums: '学习人数',
       approval: '报名审批',
@@ -1172,6 +1202,7 @@ module.exports = {
       student: '学生',
       firstLogin: '首次登录，是否需要修改密码？',
       loginFailed: '登录失败',
+      norole: '无可用角色',
       ruihome: '睿知首页',
       welcome: '欢迎来到睿知在线学习平台！',
       existingAccounts: '已有睿知学习账号？',
@@ -1194,7 +1225,7 @@ module.exports = {
       againNewPassword: '重新输入新密码',
       againNewPassword2: '请再次输入新密码',
       friendlyReminder1: '友情提醒：密码是由数字、大小写英文字母、',
-      friendlyReminder2: '中任意两种或两种以上组成，且长度8-20位',
+      friendlyReminder2: '中任意两种或两种以上组成，且长度6-110位',
       symbol: '符号',
       specialSymbols: '特殊符号',
       confirmANDlog: '确认并登录',
@@ -1202,7 +1233,7 @@ module.exports = {
       messageSent: '邮件已发送，请注意查收！',
       failSend: '发送失败',
       successSend: '发送成功',
-      passwordLength: '密码录入长度范围为8-20位',
+      passwordLength: '密码录入长度范围为6-110位',
       passwordUnqualified: '密码录入不符合字符规范',
       samePassword: '请输入相同密码',
       resetPwdSucceeded: '重置密码成功',
@@ -1257,8 +1288,17 @@ module.exports = {
       tip3: '是否确认将用户批量移到到',
       tip4: '无权限',
       batchModifyOrganization: '批量修改组织机构',
-      btnAsyncLdapData: '同步Ldap数据',
-      phoneNumber: '手机号'
+      btnAsyncLdapData: '同步LDAP数据',
+      phoneNumber: '手机号',
+      LDAPSyncSureInfo: '如果您是在e-learning中修改的数据，同步后会对其进行更改。',
+      LDAPDeptEmpty: 'LDAP上部门数据为空',
+      LDAPDeptNameIsNull: 'LDAP部门名称有空值情况，请检查LDAP部门字段配置',
+      LDAPUserNameIsNUll: '存在账号为空的数据，请检查用户字段配置',
+      LDAPUserNameAlready: 'LDAP用户名重复，请检查用户字段配置',
+      LDAPDeleteServer: '删除LDAP服务，会导致该LDAP下同步的人员和组织被清空，请确认',
+      LDAPServerEmpty: '您尚未配置LDAP服务器，请到LDAP配置中新增LDAP服务器',
+      LDAPSelectOneServer: '请选择要同步的LDAP服务器',
+      LDAPDataSyncing: '数据正在同步中'
     },
     question: {
       single: '单选题',
@@ -1330,6 +1370,7 @@ module.exports = {
       passPercentage: '及格百分比',
       fullMarks: '满分',
       inputPassPercentage: '请输入及格百分比',
+      testTime: '选择时间',
       testStartTime: '考试开始时间',
       examEndTime: '考试结束时间',
       positiveInteger: '0或正整数，最多5位数',
@@ -1481,6 +1522,7 @@ module.exports = {
       positiveInteger: '正整数',
       minute: '分钟',
       second: '秒',
+      hour: '小时',
       courseDurationTip: '请输入课程时长',
       selectTeacher: '选择讲师',
       previewFiles: '课前预习资料',
@@ -1785,7 +1827,7 @@ module.exports = {
       rule: '0或正整数，最多2位数',
       courseValidity: '课程有效期',
       tip: '温馨提示：如果不选择，则表示永久有效',
-      setUpAntiCheatingTips1: '温馨提示：防作弊只针对视频类课件，如果选择是，则学员在第一次观看视频时，不能拖动进度条',
+      setUpAntiCheatingTips1: '温馨提示：没学习过的内容不可随意拖拉快进（仅适用于视频课件）',
       setUpAntiCheatingTips2: '示例：如果选择60秒，则学员学习课件时，每1分钟会弹出一个弹窗，手动点击关闭后，才可以继续学习',
       entryTime: '请选择入职时间',
       courseCover: '课程封面',
@@ -1893,18 +1935,14 @@ module.exports = {
       dialogtime: '正整数',
       scormStandard: '仅支持Scorm1.2国际标准、如需记录学习进度、需课件本身支持',
       getCertificate: '获得证书',
-      courseTip: '提示：只能关联纯客观题的试卷，并且由系统自动批阅',
+      courseTip: '提示：只能关联纯客观题的固定试卷，并且由系统自动批阅',
       selectCertificate: '选择证书',
       certificateName: '证书名称',
       issuingAuthority: '颁发机构',
       validityCertificate: '证书有效期',
       permanent: '永久',
       pleaseSelectCertificate: '请选择证书',
-      pleaseSelectCourseware: '请选择课件',
-      confirmPublishCourse: '确认发布课程吗？',
-      confirmDownCourse: '确认下线课程吗？',
-      cancelPublishCourse: '已取消发布课程',
-      cancelDownCourse: '已取消下线课程'
+      pleaseSelectCourseware: '请选择课件'
     },
     institution: {
       organizationName: '机构名称',
@@ -2112,6 +2150,7 @@ module.exports = {
       ldapAccount: '管理员账号',
       ldapPassword: '管理员密码',
       ldapBaseDN: '基准DN',
+      ldapMaxPageSize: '单次最多查询个数',
       ldapTestBtn: 'LDAP配置测试',
       departmentFieldConfig: '部门字段配置',
       departmentFieldConfigTips: 'organizationalUnit 表与系统部门表字段对应',
@@ -2119,37 +2158,9 @@ module.exports = {
       deptCode: '部门Code(唯一值)',
       deptParentCode: '部门父Code',
       userFieldConfig: '用户字段配置',
-      userFieldConfigTips: 'inetOrgPerson 表与系统部门表字段对应'
-    },
-    sort: {
-      courseSortName: '课程分类名称',
-      courseSortImg: '课程分类封面',
-      sortHomeMange: '分类主页管理',
-      sortDescription: '课程分类介绍',
-      courseFeatured: '课程亮点',
-      featured1: '亮点一',
-      featured2: '亮点二',
-      featured3: '亮点三',
-      featuredTitle: '亮点标题',
-      featuredDescription: '亮点简介',
-      featuredContent: '亮点特色',
-      addFeaturedContent: '添加一个特色'
-    },
-    portalUser: {
-      companyName: '公司名称',
-      enterTime: '登记时间',
-      address: '地区',
-      companyScale: '公司规模',
-      userName: '用户姓名',
-      userPhone: '用户电话',
-      emailAddress: '邮箱地址',
-      postCode: '邮编'
-    },
-    registerUser: {
-      registerTime: '注册时间',
-      fromOrganize: '所属组织',
-      systemOrganize: '系统组织',
-      fromDept: '所属部门'
+      userFieldConfigTips: 'inetOrgPerson 表与系统部门表字段对应',
+      addLdapServer: '新增LDAP服务器',
+      modifyLdapServer: '修改LDAP服务器'
     }
   },
   system: {
@@ -2157,6 +2168,8 @@ module.exports = {
     'en-US': 'English',
     'pt': 'portugais',
     common: {
+      setcomfirm: '设置满意答案',
+      cancelcomfirm: '取消满意答案',
       reviewed: '已审批',
       classAuth: '班主任',
       lecturer: '讲师',
@@ -2187,13 +2200,11 @@ module.exports = {
       inputTip1: '小于等于200个字符，唯一标识符',
       inputTip2: '请输入',
       inputTip3: '请输入合法',
-      inputTip4: '唯一标识符，3-200位字母或数字',
-      inputTip5: '小于等于30个字符，唯一标识符',
+      inputTip4: '唯一标识符，6-200位字母或数字',
       less200: '小于等于200个字符',
       less_2000: '小于等于2000个字符',
       less50: '小于等于50个字符',
       less2000: '纯文本框，支持换行，小于等于2000字符',
-      lessFormat: '小于等于{count}个字符',
       save: '保存',
       submit: '提交',
       back: '返回',
@@ -2291,7 +2302,8 @@ module.exports = {
       have: '有',
       versionUpdateDescription: '版本更新说明',
       batchFreeze: '批量冻结',
-      batchUnfreezing: '批量解冻'
+      batchUnfreezing: '批量解冻',
+      fileuploaded: '文件已上传'
     },
     menu: {
       home: '首页',
@@ -2415,6 +2427,7 @@ module.exports = {
       revisionClassification: '修改分类',
       editingClassification: '编辑分类',
       knowledgeManagement: '知识管理',
+      knowledgeDetail: '知识详情',
       newQuestions: '新增试题',
       revisiontestQuestions: '修改试题',
       importtestQuestions: '导入试题',
@@ -2463,9 +2476,7 @@ module.exports = {
       bigData: '数据大屏',
       tmpName: '模板名称',
       tmpClass: '模版分类',
-      answerCorrect: '的人回答正确',
-      addCourseSort: '新增课程分类',
-      sortHomeEdit: '分类主页编辑'
+      answerCorrect: '的人回答正确'
     },
     navigation: {
       course: '课程管理',
@@ -2512,13 +2523,7 @@ module.exports = {
       entryCoverSet: '词条封面设置',
       pagePortal: '门户页管理',
       supervisionDynamic: '监管动态管理',
-      monitoringManagement: '监控管理',
-      registerUserManagement: '注册用户管理',
-      portalUserInfoManagement: '门户用户信息',
-      addDyanmic: '新增动态',
-      editDyanmic: '修改动态',
-      viewDyanmic: '预览动态',
-      viewPortalUserInfo: '查看用户信息'
+      monitoringManagement: '监控管理'
     },
     mine: {
       welcome: 'Welcome',
@@ -2617,7 +2622,7 @@ module.exports = {
       uploadFailure: '上传失败',
       newSucceeded: '新增内部讲师成功',
       addFailed: '新增内部讲师失败',
-      sureReset: '确定重置密码吗？重置后的密码为：用户名+ 123',
+      sureReset: '确定重置密码吗？重置后的密码为：用户名前6位+ a123',
       trainingDetails: '培训详情',
       revisionTraining: '修改培训',
       deleteTraining: '确认删除培训?',
@@ -2715,8 +2720,10 @@ module.exports = {
       sureSurvey: '确定发布调查?',
       cancelPublishing: '确定取消发布调查?',
       releasedSuccessfully: '发布成功',
+      releasedSuccessfully1: '提交审批成功',
       succeededUnpublish: '取消发布成功',
       failurePublishing: '发布失败',
+      failurePublishing1: '提交审批失败',
       failedUnpublish: '取消发布失败',
       classification: '调查分类',
       pleaseSurvey: '请选择调查分类',
@@ -2806,7 +2813,7 @@ module.exports = {
       allowedDownload: '是否允许下载',
       recommendation: '是否推荐',
       knowledgeRecycle: '知识回收站',
-      affiliate: '所属机构',
+      affiliate: '所属组织',
       updateTime: '更新时间',
       recommend: '推荐',
       type: '类型',
@@ -2949,11 +2956,10 @@ module.exports = {
       cancelledModify: '已取消修改数据权限',
       userAlready: '该用户名已被使用',
       characters200: '2-200个字符',
-      charactersRange: '{min}-{max}个字符',
       post: '所属岗位',
       selectPosition: '请选择所属岗位',
       useMailbox: '该邮箱已被使用',
-      rolesSetting: '设置角色',
+      rolesSetting: '角色',
       anotherRole: '选择其它角色',
       rolesCustom: '自定义角色',
       selectionRole: '选择角色',
@@ -3034,7 +3040,7 @@ module.exports = {
       failureEditor: '编辑失败',
       successEditorial: '编辑成功',
       emptyReply: '回复不能为空',
-      learningWisdom: '锐课风险合规学习培训平台',
+      learningWisdom: '睿知智能在线学习平台',
       administratorClassification: '分类管理员',
       successfullyPersonal: '个人信息保存成功！',
       failedPersonal: '个人信息保存失败',
@@ -3189,6 +3195,7 @@ module.exports = {
     SORT_NAME_ALREAD_EXSIT: '分类名称已存在',
     TRAIN_HAS_CANCEL_ERROR: '培训已取消，无法扫码签到',
     COURSE_NAME_IS_EXIST: '课程名称已存在',
+    LISTENINGCOURSE_NAME_IS_EXIST: '听课名称已存在',
     SURVEY_NAME_IS_EXIST: '问卷名称已存在',
     LEARNINGGROUP_NAME_IS_EXIST: '学习群组名称已存在',
     PUBLISHSCORE_ERROR_NOT_SUBMITTED: '有人正在考试，不允许发布考试成绩！',
@@ -3233,7 +3240,8 @@ module.exports = {
     LEVEL_HAS_TEACHER: '存在该等级的讲师，不能删除',
     MINGRADE_ERROR: '最小积分范围错误',
     HAS_NEW_VERSION_CANNOT_DELETE: '有新版在审批中，不能删除',
-    MAX_RONG: '已超出最大置顶数,请到配置中心修改置顶最大次数',
+    HAS_NEW_VERSION_CANNOT_SUBMIT: '有新版在审批中，不能提交',
+    MAX_RONG: '已超出最大置顶数,请到系统设置中参数配置里修改置顶最大次数',
     PAPER_ALREADY_DELETE: '试卷已被删除，请重新选择一张试卷',
     PAPER_ALREADY_EMPTY: '试卷为空，请选择其他试卷',
     ANSWER_CANNOT_REPEATED: '答案及选项内容不能重复',
@@ -3254,6 +3262,9 @@ module.exports = {
     LDAP_USER_USERNAME_SYSTEM_EXSIT: '用户：{}，已存在非LDAP同步的相同用户名',
     LDAP_USER_EMAIL_SYSTEM_EXSIT: '用户：{}，邮箱已存在',
     LDAP_USER_DEPT_NOT_EXSIT: '用户：{}，所属机构不存在',
+    LDAP_SERVER_ADDRESS_EXISTS: 'LDAP服务器地址已存在',
+    LDAP_SERVER_NOT_EXISTS: 'LDAP服务不存在',
+    LDAP_USER_NOT_CHANGE_PASSWORD: 'AD域用户不允许修改密码',
     GROUP_NAME_IS_EXIST: '团队名称已存在',
     TEAM_PLAN_END: '该活动议程已结束,无法签到',
     CAN_NOT_SIGN: '非该团队成员无法签到',
@@ -3263,7 +3274,12 @@ module.exports = {
     ROLE_CAN_NOT_LOGIN: '账号暂时无法登录，请联系管理员',
     INCOMPLETE_CONTENT_ERROR: '内容不完整，请完善后再发布',
     RELATED_EXERCISES_CONTAIN_SUBJECTIVE: '关联的练习含有主观题，不能发布',
-    SCHEDULE_TIME_IS_EMPTY: '考试时长不能为空'
+    SCHEDULE_TIME_IS_EMPTY: '考试时长不能为空',
+    CAN_REPLY: '报名成功后才可以回复',
+    TRAIN_ENROLLMENT_IS_FULL: '当前培训人数已满，不可以审批通过',
+    QUESTION_CANNOT_CANCELPUBLISH: '存在回答,不能取消',
+    ALREADY_APPROVAL: '您的申请已被审核，请刷新页面',
+    BOARDROOM_NUMBER_EXIT: '会议室编号已经存在'
   },
   roleTree: {
     gld: '管理端',
@@ -3727,9 +3743,8 @@ module.exports = {
     bzrd: '班主任端',
     'sy-bzr': '首页',
     'pxgl-bzr': '培训管理',
-    mhkcflgl: '课程分类管理',
-    zzyhgl: '注册用户管理',
-    mhyhxx: '门户用户信息'
+    'wdzs-pc': '我的证书',
+    'dsbd-pc': '导师帮带'
   },
   lecturer: {
     agenda: '我的议程',
@@ -3744,6 +3759,7 @@ module.exports = {
     teachTime: '授课时间',
     comprehensive: '综合评分',
     people: '人打分',
+    peopleCount: '打分人数',
     disableTrain: '培训已结束，无法再编辑！'
   }
 };
